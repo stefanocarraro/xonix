@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Xonix.Core/Xonix.Core.csproj" />
+    <Project Path="src/Xonix.Desktop/Xonix.Desktop.csproj" />
+    <Project Path="src/Xonix.Web/Xonix.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Xonix.Core.Tests/Xonix.Core.Tests.csproj" />
+  </Folder>
+</Solution>

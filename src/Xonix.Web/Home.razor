@@ -1,0 +1,11 @@
+<canvas id="screen" width="320" height="200"></canvas>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await GameHost.StartAsync();
+        }
+    }
+}

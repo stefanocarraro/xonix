@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: #000;
+    color: #eee;
+    font-family: monospace;
+}
+
+#app {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+/* Scale the 320x200 framebuffer up without blurring the pixel art. */
+#screen {
+    height: min(100vh, calc(100vw * 200 / 320));
+    aspect-ratio: 320 / 200;
+    image-rendering: pixelated;
+}
+
+#blazor-error-ui {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.6rem 1.25rem;
+    box-sizing: border-box;
+    background: #fdd;
+    color: #000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
