@@ -4,6 +4,13 @@ A clone of the 1984 DOS game Xonix, written in C# on .NET 10. It runs in the bro
 
 This project started as an experiment in game generation: the code was created by Claude (Anthropic's AI model) through Claude Code, from a one-line request to recreate the DOS original.
 
+## Download
+
+Ready-to-run executables for Windows and Linux (x64) are on the [Releases page](https://github.com/stefanocarraro/xonix/releases/latest). No .NET installation is needed.
+
+- Windows: unzip `xonix-win-x64.zip` and run `xonix.exe`. The executable is not signed, so SmartScreen may ask for confirmation.
+- Linux: `tar -xzf xonix-linux-x64.tar.gz && ./xonix`
+
 ## How to play
 
 You move a cursor around a field of sea framed by land. Leave the land to draw a trail across the sea; when you reach land again, the trail and every sea region without a ball become land. Claim 75% of the sea to complete the level.
@@ -68,3 +75,7 @@ The Linux build bundles raylib's native library; it needs a desktop with OpenGL.
 | `tests/Xonix.Core.Tests` | xUnit tests for the core. |
 
 The core runs at a fixed 60 Hz and draws into a framebuffer; each host only forwards keys, presents the frames and plays the sounds the core generates.
+
+## License
+
+[MIT](LICENSE)
