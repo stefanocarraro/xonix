@@ -55,9 +55,10 @@ to the screen, feeds the keys in and plays the sounds the core synthesizes.
 Ready-to-run executables for Windows and Linux (x64) are attached to the
 [latest release](https://github.com/stefanocarraro/xonix/releases/latest). No .NET installation is needed.
 
-- Windows: unzip `xonix-win-x64.zip` and run `xonix.exe`. The executable is not signed, so SmartScreen may ask
-  for confirmation.
-- Linux: `tar -xzf xonix-linux-x64.tar.gz && ./xonix`. Not yet tested on a Linux machine.
+- Windows: unzip `xonix-1.0.0-win-x64.zip` and run `xonix.exe`. The executable is not signed, so SmartScreen
+  may ask for confirmation.
+- Linux: `tar -xzf xonix-1.0.0-linux-x64.tar.gz && ./xonix-1.0.0-linux-x64/xonix`. Not yet tested on a Linux
+  machine.
 
 ## Requirements
 
