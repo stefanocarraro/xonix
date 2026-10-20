@@ -90,8 +90,7 @@ public sealed class Renderer(FrameBuffer target)
 
     private void DrawHud(Game game)
     {
-        int seconds = (game.TimeLeft + 59) / 60;
-        string hud = $"SCORE {game.Score} LIVES {game.SpareLives + 1} LEVEL {game.Level} FILL {game.Field.FilledPercent}/{Game.TargetPercent}% TIME {seconds}";
+        string hud = $"SCORE {game.Score} LIVES {game.SpareLives + 1} LEVEL {game.Level} FILL {game.Field.FilledPercent}/{Game.TargetPercent}% TIME {game.SecondsLeft}";
         Font.Draw(target, hud, 2, _hudTop, Palette.White);
     }
 

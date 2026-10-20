@@ -41,6 +41,9 @@ public sealed class Game
     /// <summary>Bonus per level number for completing a level.</summary>
     public const int LevelBonus = 1000;
 
+    /// <summary>Bonus per second left on the clock when a level is completed.</summary>
+    public const int SecondBonus = 10;
+
     /// <summary>Frames of the death pause.</summary>
     public const int DyingFrames = 90;
 
@@ -93,6 +96,9 @@ public sealed class Game
 
     /// <summary>Gets the frames left on the level clock.</summary>
     public int TimeLeft { get; private set; } = TimeLimitFrames;
+
+    /// <summary>Gets the whole seconds left on the level clock, rounded up as the HUD shows them.</summary>
+    public int SecondsLeft => (TimeLeft + 59) / 60;
 
     /// <summary>Gets a value indicating whether the simulation is frozen.</summary>
     public bool IsPaused { get; private set; }
@@ -278,7 +284,7 @@ public sealed class Game
         _trail.Clear();
         if (Field.FilledPercent >= TargetPercent)
         {
-            Score += LevelBonus * Level;
+            Score += LevelBonus * Level + SecondBonus * SecondsLeft;
             SpareLives++;
             State = GameState.LevelComplete;
             StateTimer = LevelCompleteFrames;

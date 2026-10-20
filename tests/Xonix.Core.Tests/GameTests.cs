@@ -178,7 +178,8 @@ public class GameTests
         Path(game, Direction.Down, Direction.Down, Direction.Down, Direction.Down, Direction.Down);
 
         Assert.Equal(GameState.LevelComplete, game.State);
-        Assert.Equal(3 + 38 * 3 + Game.LevelBonus, game.Score);
+        // Five moves take 15 frames, so the clock still shows the full 120 seconds.
+        Assert.Equal(3 + 38 * 3 + Game.LevelBonus + Game.SecondBonus * 120, game.Score);
         Assert.Equal(Game.StartingSpareLives + 1, game.SpareLives);
         Assert.Equal(Sound.LevelComplete, Assert.Single(game.DrainSounds()));
 
